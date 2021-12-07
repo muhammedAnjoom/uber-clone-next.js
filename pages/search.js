@@ -84,5 +84,5 @@ const Star = tw.img`
 bg-gray-400 w-10 h-10 p-2 rounded-full mr-2
 `
 const ConfirmLocation = tw.div`
-bg-black text-white py-2 px-2 mr-3 ml-3 text-center mt-3 cursor-pointer
+bg-black text-white py-3 px-2 mr-3 ml-3 text-center mt-3 cursor-pointer text-2xl
 `
