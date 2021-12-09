@@ -8,8 +8,8 @@ import Link from 'next/link'
 
 const Confirm = () => {
     const router = useRouter();
-    const [pickupCoordinates, setPickupCoordinates] = useState();
-    const [dropoffCoordinates, setDropoffCoordinates] = useState();
+    const [pickupCoordinates, setPickupCoordinates] = useState(0, 0);
+    const [dropoffCoordinates, setDropoffCoordinates] = useState(0, 0);
     
     const {pickup, dropoff} = router.query
     // console.log("pickup" ,pickup);
@@ -64,7 +64,10 @@ const Confirm = () => {
            {/* Bottom Container */}
            <RideContainer>
                 {/* Ride selector  */}
-                <RideSelector />
+                <RideSelector 
+                    pickupCoordinates={pickupCoordinates}
+                    dropoffCoordinates={dropoffCoordinates}
+                />
                 {/* confirm Button  */}
                 <ConfirmContainer>
                     <ConfirmButton>
